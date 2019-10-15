@@ -1,9 +1,11 @@
 <main class="app">
   <header class="app__header py-3">
     <h3 class="text-center m-0">
-      {{ appTitle }}
+      <a [routerLink]="['/']">
+        {{ appTitle }}
+      </a>
     </h3>
   </header>
 
-  <app-todo-list></app-todo-list>
+  <router-outlet></router-outlet>
 </main>

@@ -8,10 +8,10 @@ import { Title } from '@angular/platform-browser';
 })
 export class AppComponent {
   get appTitle(): string {
-    return this.title.getTitle();
+    return this._Title.getTitle();
   }
 
-  constructor(private title: Title) {
-    title.setTitle('Not Another Todo App');
-  }
+  constructor(
+    private _Title: Title
+  ) { }
 }

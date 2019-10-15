@@ -1,0 +1,9 @@
+<div class="todo-form mt-3">
+  <div class="todo-form__group">
+      <input type="text"
+              class="todo-input"
+              placeholder="New list"
+              [(ngModel)]="title"
+              (keyup.enter)="add()" />
+  </div>
+</div>

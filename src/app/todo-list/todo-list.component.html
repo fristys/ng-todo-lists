@@ -1,0 +1,17 @@
+<div class="container">
+  <ng-container *ngIf="guid && list">
+    <div class="todo-form__group">
+        <input type="checkbox"
+                [(ngModel)]="showCompletedToDos" />
+        <span>Show completed</span>
+    </div>
+
+    <ul class="reset todo-list">
+        <app-todo *ngFor="let todo of list.toDos | showCompleted:showCompletedToDos | sortTodos; let i = index; trackBy: taskGuid"
+                  [guid]="guid"
+                  [todo]="todo"></app-todo>
+      </ul>
+
+      <app-todo-form [guid]="guid"></app-todo-form>
+  </ng-container>
+</div>

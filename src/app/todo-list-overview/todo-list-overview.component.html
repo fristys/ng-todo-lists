@@ -1,0 +1,8 @@
+<div class="container">
+    <ul class="reset todo-list">
+      <app-todo-list-item *ngFor="let list of toDoLists; trackBy: guid"
+                          [list]="list"></app-todo-list-item>
+    </ul>
+
+    <app-todo-list-form></app-todo-list-form>
+  </div>

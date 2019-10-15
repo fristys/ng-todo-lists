@@ -1,0 +1,7 @@
+<li class="clicky todo-list__item" (click)="navigate()">
+  {{ list.title }}
+
+  <span>
+    {{ list.allToDosCompleted ? (list.toDos.length ? 'All done 🚀' : '0 todos') : list.toDosLeft + ' todos to do' }}
+  </span>
+</li>

@@ -1,0 +1,7 @@
+<li class="clicky todo-list__item"
+    [title]="todo.title"
+    [ngClass]="{ 'todo-list__item--completed': todo.completed }"
+    [attr.aria-label]="'Toggle completion for ' + todo.title"
+    (click)="toggle()">
+  {{ todo.title }}
+</li>
